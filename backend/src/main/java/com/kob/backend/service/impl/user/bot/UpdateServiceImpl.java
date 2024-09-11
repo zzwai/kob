@@ -33,7 +33,7 @@ public class UpdateServiceImpl implements UpdateService {
         Map<String, String> map = new HashMap<>();
 
         if (title == null || title.length() == 0) {
-            map.put("error_messgae", "标题不能为空");
+            map.put("error_message", "标题不能为空");
             return map;
         }
 
@@ -80,7 +80,7 @@ public class UpdateServiceImpl implements UpdateService {
                 description,
                 content,
                 bot.getRating(),
-                bot.getCreate_time(),
+                bot.getCreatetime(),
                 new Date()
         );
 
