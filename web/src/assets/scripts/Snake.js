@@ -69,10 +69,10 @@ export class Snake extends AcGameObject {
             this.cells[i] = JSON.parse(JSON.stringify(this.cells[i - 1]));
         }
 
-        console.log(this.gamemap.check_valid(this.next_cell));
-        if (!this.gamemap.check_valid(this.next_cell)) {
-            this.status = 'die';
-        }
+        // console.log(this.gamemap.check_valid(this.next_cell));
+        // if (!this.gamemap.check_valid(this.next_cell)) {
+        //     this.status = 'die';
+        // }
     }
 
     update_move() {
