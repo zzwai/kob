@@ -24,6 +24,7 @@ export default {
 
         let socket = null;
         onMounted(() => {
+            store.commit("updateLoser", "none")
             store.commit("updateOpponent", {
                 username: "我的对手",
                 photo: "https://cdn.acwing.com/media/article/image/2022/08/09/1_1db2488f17-anonymous.png"

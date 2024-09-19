@@ -16,10 +16,10 @@ public class MatchingController {
 
     @PostMapping("/player/add/")
     public String addPlayer(@RequestParam MultiValueMap<String, String> data) {
-        int userId = Integer.parseInt(Objects.requireNonNull(data.getFirst("user_id")));
-        int rating = Integer.parseInt(Objects.requireNonNull(data.getFirst("rating")));
-
-        return matchingService.addPlayer(userId, rating);
+        Integer userId = Integer.parseInt(Objects.requireNonNull(data.getFirst("user_id")));
+        Integer rating = Integer.parseInt(Objects.requireNonNull(data.getFirst("rating")));
+        Integer botId = Integer.parseInt(Objects.requireNonNull(data.getFirst("bot_id")));
+        return matchingService.addPlayer(userId, rating, botId);
     }
 
     @PostMapping("/player/remove/")
